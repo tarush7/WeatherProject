@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <style>
+        form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Style the label and input */
+label,
+input {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Style the input box */
+input {
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 250px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Style the image */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the paragraph */
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+    </style>
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        <label for="cityInput">City Name: </label>
+        <input id="cityInput" type="text" name="cityName">
+        <button type="submit">GO</button>
+    </form>
+</body>
+
+</html>

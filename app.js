@@ -2,6 +2,8 @@ const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 const { log } = require("console");
+const config = require("./config");
+
 
 const app = express();
 
@@ -13,9 +15,8 @@ app.get("/", function (req, res) {
 
 app.post("/index.html", function (req, res) {
     const query = req.body.cityName;
-    const appKey = "8526bfdc3f6dbae00fd275117a14eb52";
     const unit = "metric";
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&APPID=" + appKey + "&units=" + unit;
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&APPID=" + config.appKey + "&units=" + unit;
 
     https.get(url, function (response) {
         console.log(response.statusCode);
